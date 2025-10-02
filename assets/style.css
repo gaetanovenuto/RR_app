@@ -1,0 +1,248 @@
+* {
+    font-family: "Work Sans", sans-serif;
+}
+
+th, td {
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    padding: 0;
+    font-weight: 500;
+}
+
+.table>:not(caption)>*>* {
+    padding: 5px !important;
+}
+
+:root {
+    --darkBlue: rgb(4, 15, 57);
+}
+
+.dark_blue_bg {
+    background-color: var(--darkBlue);
+}
+
+.ec-timeline .ec-time, .ec-timeline .ec-line {
+    width: 16px;
+}
+.ec-timeline .ec-time {
+    overflow: visible;
+}
+#reserve-form .ec-timeline .ec-time time {
+    display: inline-block;
+    width: 64px;
+    text-align: center;
+}
+
+@media screen and (max-width: 409.99px) {
+    #reserve-form .ec-resource-day-view {
+        width: 30%;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 410px) and (max-width: 600px) {
+    #reserve-form .ec-resource-day-view {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 600.01px) and (max-width: 900px) {
+    .ec-resource-day-view {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+.overlay {
+    z-index: 999;
+    width: 100%;
+    height: auto;
+}
+
+.passed_event {
+    background-color: lightgray;
+}
+
+.users_container {
+    max-height: 150px !important;
+    overflow-y: auto;
+}
+
+.event_notes {
+    max-height: 400px;
+}
+
+.ec-body {
+    max-height: 600px;
+}
+
+.offcanvas_button {
+    height: 50px;
+    padding: 0 15px;
+}
+
+.offcanvas_button > * {
+    color: var(--darkBlue);
+}
+
+#calendar {
+    max-width: 800px;
+
+}
+
+@media screen and (min-width: 1400px) {
+    #calendar {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #calendar {
+        max-width: 1300px;
+    }
+}
+
+.errorBox {
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.781);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.errorBox > .card {
+    width: 75%;
+    height: 50%;
+    z-index: 11;
+}
+
+.toast {
+    top: 2% !important;
+    right: 2% !important;
+    max-width: 300px;
+}
+
+.reservation_toast {
+    z-index: 999;
+}
+
+#modal_ranges, #modal_errors {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.modal_ranges_body, .modal_error_body {
+    z-index: 900;
+    background-color: white;
+    width: 400px;
+    max-height: 90%;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipient-data {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.progress {
+    height: 3px !important;
+}
+
+.form-control-style {
+    border: 1px solid #dee2e6;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: 400;
+    padding: .375rem;
+    border-radius: .375rem;
+}
+
+#input-password:focus-visible, #input_mails:focus-visible, .dropdown .btn:focus-visible, .dropdown img:focus-visible  {
+    outline-color: transparent !important;
+}
+
+.dropdown .btn:active {
+    border: none;
+}
+
+#list {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-button.small-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+.accordion-button,
+.accordion-item,
+.accordion-header {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.users_container {
+    max-height: 450px;
+}
+
+.navbar_img {
+    width: 25px;
+}
+
+.event_wrapper {
+    height: 250px;
+    overflow-y: auto;
+}
+
+.event_card {
+    overflow-y: auto;
+}
+
+#homepage_reservations_section {
+    min-height: 715px;
+}
+
+@media screen and (max-width: 1200px) {
+    #homepage_header {
+        border-top: 1px solid #e9ecef62;
+    }
+}
+
+#accordion_languages .accordion-button:not(.collapsed).dark_blue_bg {
+    background-color: #1b2d74;
+}
+
+#accordion_languages img, .dropdown img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.dropdown .btn.show, .dropdown .btn.show:focus-visible  {
+    border: none;
+}

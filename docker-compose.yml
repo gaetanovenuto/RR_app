@@ -1,0 +1,34 @@
+services:
+  php-apache:
+    build:
+      context: .
+    depends_on:
+      - "db"
+    volumes:
+      - "./:/var/www/html/"
+    ports:
+      - 80:80
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Passw0rd
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: "phpmyadmin/phpmyadmin"
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+  mailhog:
+    image: mailhog/mailhog
+    logging:
+        driver: 'none'  # disable saving logs
+    ports:
+    - 1025:1025 # smtp server
+    - 8025:8025 # web ui
+networks:
+  default:
